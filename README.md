@@ -36,7 +36,7 @@ To pull newer skills later:
 /plugin update scribeo-skills
 ```
 
-> **Note:** the skill directories are currently scaffolding only — they contain no skill content yet, so installing today registers the marketplace but loads no skills. See [Status](#status).
+> **Note:** one skill is authored (`scribeo-ux-engineering`); the remaining six are scaffolding. See [Status](#status).
 
 ## Repository structure
 
@@ -72,13 +72,13 @@ SKILL/
 
 ## Status
 
-**Scaffolding complete. No skill content authored yet.**
+**1 of 7 skills authored.**
 
-Every directory under `skills/` is an intentional placeholder holding only a `.gitkeep` (git cannot track empty directories). Skills will be authored one at a time, each following the contract in [`skills/README.md`](skills/README.md).
+Remaining directories under `skills/` are intentional placeholders holding only a `.gitkeep` (git cannot track empty directories). Skills are authored one at a time, each following the contract in [`skills/README.md`](skills/README.md).
 
 | Skill | Status |
 | --- | --- |
-| `scribeo-ux-engineering` | Not started |
+| `scribeo-ux-engineering` | **Authored** — v0.2.0 |
 | `scribeo-motion` | Not started |
 | `scribeo-visual-qa` | Not started |
 | `scribeo-performance` | Not started |
