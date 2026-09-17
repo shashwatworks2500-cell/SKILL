@@ -1,6 +1,8 @@
-# Deriving the Design Language
+# Working With the Design Language
 
-Load when translating a brief into a visual direction, or when diagnosing "this feels generic / template-y / AI-made".
+Load when applying an established visual direction to structure, or when diagnosing a result that reads as generic.
+
+> **Scope.** Deriving the visual direction — palette, typeface selection, aesthetic point of view, visual composition — belongs to Anthropic's `frontend-design` skill. Use this file for what that direction means *structurally*: the evidence it should rest on, the UX consequences it carries (density, pacing, trust), and the structural causes of a generic outcome. Do not originate a palette or typeface here.
 
 ## Why derivation, not preference
 

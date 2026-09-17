@@ -6,6 +6,8 @@ Typography carries most of the perceived quality of a premium site. It is also w
 
 ## Selection
 
+> **Boundary.** Choosing the typefaces is `frontend-design`'s decision. The table below is for *reading* a chosen direction — understanding what a typeface's character implies for scale, measure, and leading — and for supplying brand evidence when asked. Everything after this section (scale, responsive sizing, line-height, tracking, measure, roles, contrast) is this skill's to own.
+
 Choose from brand evidence, not preference. In order: existing brand typeface → a typeface matching the brand's character → a well-engineered neutral.
 
 Match **character** to positioning:

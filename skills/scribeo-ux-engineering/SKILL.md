@@ -1,6 +1,6 @@
 ---
 name: scribeo-ux-engineering
-description: Use when designing, building, restructuring, or reviewing the UX and front-end structure of a website or web interface — landing pages, marketing sites, product pages, navigation, hero and content sections, buttons and CTAs, forms, cards, layout, responsive behaviour across mobile/tablet/desktop, typography hierarchy, spacing, content density, and interaction/loading/empty/error states. Covers information architecture, visual and semantic hierarchy, conversion-oriented structure, premium and editorial design direction, touch and keyboard interaction, and accessible interaction design. Triggers on requests like "build a landing page", "design this section", "make this look premium", "improve the layout", "this feels generic/template-like", "make it responsive", "fix the mobile layout", "restructure this page", "improve the CTA", "build a contact form", or any work translating a brand, design reference, or client brief into production interface structure. Does not own animation implementation (use scribeo-motion), visual regression review (scribeo-visual-qa), performance profiling (scribeo-performance), dedicated accessibility auditing (scribeo-accessibility), SEO (scribeo-seo), or test authoring (scribeo-testing).
+description: Use when structuring, restructuring, or reviewing the UX and front-end architecture of a website or web interface — information hierarchy, page and section structure, navigation, buttons and CTAs, forms, cards, layout structure, responsive behaviour across mobile/tablet/desktop, type scale and measure, spacing rhythm, content density, and interaction/loading/empty/error states. Covers information architecture, usability, semantic HTML structure, conversion-oriented structure, touch and keyboard interaction, and accessible interaction design. Triggers on requests like "improve the layout", "make it responsive", "fix the mobile layout", "restructure this page", "improve the CTA", "build a contact form", "handle the empty and error states", "is this usable on mobile", "the hierarchy is unclear", or any work turning content and business goals into production interface structure. Visual design direction — aesthetic exploration, palette, typeface choice, visual composition and distinctive styling — belongs to frontend-design; this skill consumes that direction and engineers the structure, behaviour and states beneath it. Also does not own animation implementation (scribeo-motion), visual regression review (scribeo-visual-qa), performance profiling (scribeo-performance), dedicated accessibility auditing (scribeo-accessibility), SEO (scribeo-seo), or test authoring (scribeo-testing).
 ---
 
 # Scribeo UX Engineering
@@ -29,18 +29,21 @@ These are **never** permitted, under any brief:
 
 ## Boundaries
 
-**This skill owns:** information architecture · layout and composition · responsive UX strategy · typographic and visual hierarchy · spacing and rhythm · navigation structure · component behaviour and state design · forms UX · content density · touch and keyboard interaction · semantic HTML structure · accessible interaction design · conversion structure · design-language derivation.
+**This skill owns:** information architecture · UX architecture · layout structure · responsive UX strategy · type scale, measure and information hierarchy · spacing and rhythm · navigation structure · component behaviour and state design · forms UX · usability · content density · touch and keyboard interaction · semantic HTML structure · accessible interaction design · conversion structure.
 
 **This skill does not own:**
 
 | Concern | Belongs to |
 | --- | --- |
+| Visual design direction, aesthetic exploration, palette, typeface choice, visual composition, distinctive styling | `frontend-design` (Anthropic) |
 | Animation implementation, timing, easing, choreography | `scribeo-motion` |
 | Visual regression, cross-browser fidelity review | `scribeo-visual-qa` |
 | Core Web Vitals, bundle size, render profiling | `scribeo-performance` |
 | WCAG audit, remediation, assistive-tech verification | `scribeo-accessibility` |
 | Metadata, structured data, crawlability | `scribeo-seo` |
 | Unit, integration, e2e test authoring | `scribeo-testing` |
+
+**The frontend-design boundary, precisely:** `frontend-design` decides *how it looks* — aesthetic direction, palette, typeface selection, visual composition, the distinctive point of view, and the polish of the rendered surface. This skill decides *how it works* — what goes where and in what order, how it behaves, how it responds, what every state does. On a new build, take the visual direction from `frontend-design` and engineer beneath it; do not re-derive the aesthetic here, and do not defer structure, states, or responsive behaviour to it. When a request is purely aesthetic ("make this look premium", "this feels templated", "choose a typeface"), that is `frontend-design`'s work, not this skill's.
 
 **The accessibility boundary, precisely:** this skill *designs accessible interaction structures* — correct semantics, logical order, visible focus, adequate targets, labelled controls, motion-independent meaning. `scribeo-accessibility` *audits and remediates* against WCAG. Build it right here; prove it there. Do not run a conformance audit from this skill, and do not defer basic semantics to a later audit.
 
@@ -73,19 +76,21 @@ If the brief does not answer 3 and 4, ask before building. Everything downstream
 10. **Verify actual behaviour** — real viewports, keyboard only, long and empty content, slow network. Not a screenshot at one width.
 11. **Refine on evidence** — change what you observed failing, not what you imagine could be nicer.
 
-## Deriving the design language
+## Consuming the design language
 
-Scribeo's direction is premium, modern, editorial, sophisticated, intentional, distinctive — restrained where restraint earns trust, immersive where immersion sells. **This is a quality standard, not a visual template.** A law firm and a surf brand both meet it and must not resemble each other.
+**Deriving the visual direction is `frontend-design`'s job, not this skill's.** Palette, typeface selection, aesthetic point of view, and visual composition come from there. Scribeo's standard — premium, modern, editorial, intentional, distinctive — is the quality bar that direction must clear; it is never a template, and a law firm and a surf brand both clear it without resembling each other.
 
-Derive the language from evidence, in this order: **brand assets → industry conventions (to honour or deliberately break) → audience expectation → content shape → business goal → supplied references.**
+What this skill needs from the direction before engineering anything:
 
-Then state the language explicitly before building:
+- **Density** — how much can appear at once, per breakpoint
+- **Measure and type scale** — the structural consequences of the chosen typefaces
+- **Focal intent** — which element is the focal point, so hierarchy can be built to serve it
+- **Motion budget** — how much state change may be animated (craft belongs to `scribeo-motion`)
+- **Content shape** — how many items actually exist, and how long they run
 
-> Editorial and restrained. Serif display, generous measure, near-monochrome with one accent from the logo. Photography-led, full-bleed. Motion minimal. Density low — this audience is deciding slowly and wants to feel unhurried.
+If the direction has not been established, ask for it or hand the aesthetic question to `frontend-design` — do not invent a palette and typeface here to unblock yourself, and do not stall structural work that the direction does not affect (semantics, states, responsive strategy, form behaviour) while waiting.
 
-If you cannot write that paragraph, you are not ready to style. When the brief is genuinely open, propose two distinct directions and let the client choose — do not average them into something safe.
-
-See `references/design-language.md` for the derivation method and the premium/generic distinction.
+See `references/design-language.md` for the UX consequences of a direction and the structural causes of a generic result.
 
 ## Non-negotiable engineering defaults
 
@@ -122,7 +127,7 @@ These hold on every Scribeo build, regardless of design direction.
 
 | Load | When |
 | --- | --- |
-| `references/design-language.md` | Deriving direction from a brief; diagnosing "this feels generic / AI-made" |
+| `references/design-language.md` | Applying an established direction; diagnosing a structurally generic result |
 | `references/layout.md` | Containers, grids, spacing rhythm, section composition, asymmetry, editorial layout |
 | `references/typography.md` | Type scale, hierarchy, measure, line-height, tracking, responsive scaling |
 | `references/responsive.md` | Desktop/tablet/mobile strategy, breakpoints, navigation adaptation, density |
@@ -132,9 +137,9 @@ These hold on every Scribeo build, regardless of design direction.
 
 ## The generic test
 
-Premium is not a visual effect. It is evidence of decisions. Before shipping, run these — each failure has a specific cause:
+Premium is not a visual effect. It is evidence of decisions. Whether the *aesthetic* reads as generic is `frontend-design`'s call; these are the **structural** checks that this skill owns. Before shipping, run each one — every failure has a specific structural cause:
 
-1. **Swap test** — replace the logo and copy with a different company's. Does the page still work? If yes, it expresses no brand. *Cause: styling applied before design language was derived.*
+1. **Swap test** — replace the logo and copy with a different company's. Does the page still work? If yes, it expresses no brand. *Cause: structure built before the design direction was established.*
 2. **Section test** — could any section be lifted into an unrelated site unchanged? *Cause: template sections instead of content-driven composition.*
 3. **Reason test** — point at three visual choices at random and state the reason for each. Hesitation means decoration.
 4. **Hierarchy test** — squint until the type is illegible. Does the eye still land on the primary action first?
@@ -142,7 +147,7 @@ Premium is not a visual effect. It is evidence of decisions. Before shipping, ru
 6. **Content test** — does it survive real content: a 9-word headline, a 40-item list, one testimonial instead of three, a missing image?
 7. **Proof test** — is every number, quote, logo, and badge traceable to something the client supplied?
 
-The "AI-generated" look is not a style — it is the absence of these answers: even density everywhere, decorative gradients with no brand basis, three feature cards because three fits, and copy that could belong to any company.
+Structurally, the "AI-generated" look is the absence of these answers: even density everywhere, no focal hierarchy, three feature cards because three fits, and sections that could belong to any company. The visual tells — default palettes, template chrome, decorative gradients — are `frontend-design`'s to catch.
 
 ## Quality gate
 
