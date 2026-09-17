@@ -1,0 +1,36 @@
+{
+  "name": "scribeo",
+  "description": "Scribeo's central marketplace of reusable Claude Code skills and workflows.",
+  "version": "0.1.0",
+  "owner": {
+    "name": "Scribeo",
+    "url": "https://github.com/shashwatworks2500-cell"
+  },
+  "plugins": [
+    {
+      "name": "scribeo-skills",
+      "displayName": "Scribeo Skills",
+      "source": "./",
+      "description": "Reusable Scribeo engineering skills covering UX engineering, motion, visual QA, performance, accessibility, SEO, and testing.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Scribeo",
+        "url": "https://github.com/shashwatworks2500-cell"
+      },
+      "homepage": "https://github.com/shashwatworks2500-cell/SKILL",
+      "repository": "https://github.com/shashwatworks2500-cell/SKILL",
+      "keywords": [
+        "scribeo",
+        "ux-engineering",
+        "motion",
+        "visual-qa",
+        "performance",
+        "accessibility",
+        "seo",
+        "testing"
+      ],
+      "category": "development",
+      "skills": "./skills"
+    }
+  ]
+}
