@@ -1,7 +1,7 @@
 {
   "name": "scribeo",
   "description": "Scribeo's central marketplace of reusable Claude Code skills and workflows.",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "owner": {
     "name": "Scribeo",
     "url": "https://github.com/shashwatworks2500-cell"
@@ -12,7 +12,7 @@
       "displayName": "Scribeo Skills",
       "source": "./",
       "description": "Reusable Scribeo engineering skills covering UX engineering, motion, visual QA, performance, accessibility, SEO, and testing.",
-      "version": "0.4.0",
+      "version": "0.5.0",
       "author": {
         "name": "Scribeo",
         "url": "https://github.com/shashwatworks2500-cell"
