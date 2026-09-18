@@ -36,7 +36,7 @@ To pull newer skills later:
 /plugin update scribeo-skills
 ```
 
-> **Note:** six skills are authored; only `scribeo-seo` remains scaffolding. See [Status](#status).
+> **Note:** all seven skills are authored. See [Status](#status).
 
 ## Repository structure
 
@@ -72,9 +72,9 @@ SKILL/
 
 ## Status
 
-**6 of 7 skills authored.**
+**7 of 7 skills authored — the collection is complete.**
 
-Remaining directories under `skills/` are intentional placeholders holding only a `.gitkeep` (git cannot track empty directories). Skills are authored one at a time, each following the contract in [`skills/README.md`](skills/README.md).
+Every skill follows the contract in [`skills/README.md`](skills/README.md).
 
 | Skill | Status |
 | --- | --- |
@@ -83,7 +83,7 @@ Remaining directories under `skills/` are intentional placeholders holding only 
 | `scribeo-visual-qa` | **Authored** — v0.4.0 |
 | `scribeo-performance` | **Authored** — v0.5.0 |
 | `scribeo-accessibility` | **Authored** — v0.6.0 |
-| `scribeo-seo` | Not started |
+| `scribeo-seo` | **Authored** — v1.0.0 |
 | `scribeo-testing` | **Authored** — v0.7.0 |
 
 ## Contributing a skill
