@@ -81,6 +81,8 @@ A shared concept is not a conflict. When a barrier's *fix* is structural — reo
 - **`scribeo-ux-engineering` → here.** UX structure must account for accessibility: semantics, logical order, visible focus, adequate targets, labelled controls.
 - **here → `scribeo-ux-engineering`.** When a UX pattern is the barrier, the structural decision is theirs; supply the requirement, not a redesign.
 
+**If `frontend-design` is unavailable.** It is an Anthropic-provided skill, not part of the `scribeo-skills` marketplace, so it may not be installed. Never invent the aesthetic here to unblock yourself, and never stall work the aesthetic does not gate. Say plainly that the visual direction is unset, ask for it, and proceed with the full audit: semantics, names and roles, keyboard access, focus management, forms, announcements and reflow. Where a fix would change the palette — a contrast or focus-visibility failure — state the conformance requirement and offer a compliant option rather than selecting the new colour unilaterally.
+
 ## Workflow
 
 **Phase 1 — Understand (before auditing)**

@@ -4,7 +4,18 @@ Every directory here is one skill. This document is the contract each must satis
 
 ## Current state
 
-All seven directories are **scaffolding**. Each contains only a `.gitkeep` placeholder — git cannot track an empty directory, so removing it removes the directory. Delete the `.gitkeep` only when replacing it with a real `SKILL.md`.
+All seven skills are **authored and validated**. Every directory contains a real `SKILL.md` plus a `references/` tree; no `.gitkeep` placeholders remain.
+
+Every `SKILL.md` sits well under the ~500-line target, with depth pushed into `references/`. To check the current shape of the library rather than trusting a number written here:
+
+```bash
+for d in skills/*/; do
+  printf '%-28s %4s lines  %2s refs\n' \
+    "$(basename "$d")" "$(wc -l < "$d/SKILL.md")" "$(ls "$d/references" 2>/dev/null | wc -l)"
+done
+```
+
+When a **new** domain directory is scaffolded, it carries a `.gitkeep` — git cannot track an empty directory, so removing the placeholder removes the directory. Delete it only when replacing it with a real `SKILL.md`.
 
 ## Minimum viable skill
 
@@ -65,6 +76,17 @@ Overlapping descriptions are the primary failure mode in a multi-skill collectio
 | `scribeo-seo` | Crawlability, metadata, structured data, canonicalisation, rendering strategy | Page speed as a metric (→ performance) |
 | `scribeo-testing` | Unit, integration, e2e strategy and implementation | Visual snapshots (→ visual-qa) |
 
+## External skill dependency
+
+Every skill in this collection routes aesthetic judgement — palette, typeface, visual composition, distinctive styling — to **`frontend-design`**, an Anthropic-provided skill that is **not part of this marketplace**.
+
+Two rules follow:
+
+- **Declare it.** A skill that hands work to `frontend-design` must say so in its boundary table, marked `(Anthropic)` so no reader looks for it here.
+- **Degrade gracefully.** Every skill carries an *"If `frontend-design` is unavailable"* clause in its `## Boundaries` section, stating what it still completes without the visual direction. A skill that simply blocks when an uninstalled skill is missing is broken. Match the existing wording when adding a new skill.
+
+Do not add a new dependency on a skill outside this marketplace without both.
+
 ## Definition of done
 
 A skill ships only when all of these hold:
@@ -72,6 +94,7 @@ A skill ships only when all of these hold:
 - [ ] `name` matches the directory exactly and carries the `scribeo-` prefix
 - [ ] `description` is third person and names concrete triggers, not self-description
 - [ ] `description` states its boundary against the adjacent skills above
+- [ ] Any dependency on a skill outside this marketplace is marked `(Anthropic)` and carries an *"If `<skill>` is unavailable"* clause naming what still completes without it
 - [ ] Body is imperative, decision-first, and free of filler
 - [ ] At least one correct/incorrect pattern contrast
 - [ ] `SKILL.md` under ~500 lines; depth pushed to `references/`

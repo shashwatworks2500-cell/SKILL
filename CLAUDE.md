@@ -80,6 +80,7 @@ Use `references/` for prose Claude should read, `assets/` for files it should co
 - **Markdown:** ATX headings (`##`), fenced code blocks with a language tag, relative links between files in this repo.
 - **Spelling:** consistent within a file; don't mix `colour`/`color` in the same skill.
 - **Versioning:** bump the `scribeo-skills` `version` in `.claude-plugin/marketplace.json` on every substantive skill change, or installed copies will not detect an update. Semver: patch for wording, minor for new skills or capabilities, major for breaking reorganisation.
+- **External dependencies:** a skill may route work to a skill outside this marketplace (today, only `frontend-design`, Anthropic). Mark it `(Anthropic)` in the boundary table and give the skill an *"If `<skill>` is unavailable"* clause naming what it still completes without it. A skill that blocks on something that may not be installed is broken.
 - **Commits:** imperative subject, scoped where useful — `add scribeo-motion skill`, `fix trigger description in scribeo-seo`.
 
 ## Validation
