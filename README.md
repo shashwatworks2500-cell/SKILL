@@ -36,7 +36,13 @@ To pull newer skills later:
 /plugin update scribeo-skills
 ```
 
-> **Note:** all seven skills are authored. See [Status](#status).
+> **Note:** all seven skills are authored and validated. See [Status](#status).
+
+### Companion skill
+
+Every skill here routes aesthetic judgement — palette, typeface, visual composition, distinctive styling — to **`frontend-design`**, an Anthropic-provided skill that is **not part of this marketplace** and is installed separately. The seven skills engineer *beneath* a visual direction; they deliberately do not set one.
+
+They do not hard-fail without it. Each carries an *"If `frontend-design` is unavailable"* clause in its `## Boundaries` section, naming exactly what it still completes when the visual direction is unset — a full accessibility audit, the whole SEO pass, the entire test portfolio, measurement and budgets, structure and states. What none of them will do is invent the aesthetic to unblock itself.
 
 ## Repository structure
 
@@ -72,19 +78,23 @@ SKILL/
 
 ## Status
 
-**7 of 7 skills authored — the collection is complete.**
+**7 of 7 skills authored and validated — the collection is complete.**
 
-Every skill follows the contract in [`skills/README.md`](skills/README.md).
+Every skill follows the contract in [`skills/README.md`](skills/README.md): valid frontmatter, a stated boundary against every adjacent skill, a decision-first body, and a closing quality gate.
 
 | Skill | Status |
 | --- | --- |
-| `scribeo-ux-engineering` | **Authored** — v0.2.0 |
-| `scribeo-motion` | **Authored** — v0.3.0 |
-| `scribeo-visual-qa` | **Authored** — v0.4.0 |
-| `scribeo-performance` | **Authored** — v0.5.0 |
-| `scribeo-accessibility` | **Authored** — v0.6.0 |
-| `scribeo-seo` | **Authored** — v1.0.0 |
-| `scribeo-testing` | **Authored** — v0.7.0 |
+| `scribeo-ux-engineering` | Authored · validated |
+| `scribeo-motion` | Authored · validated |
+| `scribeo-visual-qa` | Authored · validated |
+| `scribeo-performance` | Authored · validated |
+| `scribeo-accessibility` | Authored · validated |
+| `scribeo-seo` | Authored · validated |
+| `scribeo-testing` | Authored · validated |
+
+### Versioning
+
+Skills are **not versioned individually.** The collection ships as one plugin, and the only version that exists — the only one an installed copy can detect — is the `scribeo-skills` `version` in [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json). Bump it on every substantive skill change: patch for wording, minor for a new skill or capability, major for a breaking reorganisation.
 
 ## Contributing a skill
 

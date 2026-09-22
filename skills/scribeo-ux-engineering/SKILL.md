@@ -47,6 +47,8 @@ These are **never** permitted, under any brief:
 
 **The accessibility boundary, precisely:** this skill *designs accessible interaction structures* — correct semantics, logical order, visible focus, adequate targets, labelled controls, motion-independent meaning. `scribeo-accessibility` *audits and remediates* against WCAG. Build it right here; prove it there. Do not run a conformance audit from this skill, and do not defer basic semantics to a later audit.
 
+**If `frontend-design` is unavailable.** It is an Anthropic-provided skill, not part of the `scribeo-skills` marketplace, so it may not be installed. Never invent the aesthetic here to unblock yourself, and never stall work the aesthetic does not gate. Say plainly that the visual direction is unset, ask for it, and proceed with everything this skill owns that the direction does not affect: semantic structure, information hierarchy, responsive strategy, form behaviour, and every interaction, loading, empty and error state. Hand back the palette, typeface and composition questions when the direction arrives.
+
 ## Workflow
 
 Never start with styling. Styling a structure you have not established produces decoration, then rework.

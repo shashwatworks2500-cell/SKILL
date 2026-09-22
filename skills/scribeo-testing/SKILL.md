@@ -82,6 +82,8 @@ This skill's centre of gravity is the fourth column. It may also detect (a faili
 - **`scribeo-seo` → here.** Supplies crawlability and indexability contracts that can be regression-tested.
 - **here → `scribeo-seo`.** Tests deterministic technical contracts — a title renders, a canonical tag is present and correct, a route returns the expected status. Does not decide SEO strategy.
 
+**If `frontend-design` is unavailable.** It is an Anthropic-provided skill, not part of the `scribeo-skills` marketplace, so it may not be installed. Never invent the aesthetic here to unblock yourself, and never stall work the aesthetic does not gate. Say plainly that the visual direction is unset, ask for it, and proceed with the full test portfolio. Nothing this skill owns depends on the visual direction — tests assert behaviour and contracts, never appearance.
+
 ## Workflow
 
 **Phase 1 — Understand**

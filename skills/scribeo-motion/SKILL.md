@@ -58,6 +58,8 @@ Never permitted, on any brief:
 
 **On performance and accessibility:** motion is a frequent cause of jank and a genuine accessibility risk, so this skill carries the motion-specific parts of both — compositor-friendly properties, frame budget, `prefers-reduced-motion`, vestibular safety. It does not own the broader domains. Page-level budgets and Core Web Vitals go to `scribeo-performance`; conformance audits go to `scribeo-accessibility`.
 
+**If `frontend-design` is unavailable.** It is an Anthropic-provided skill, not part of the `scribeo-skills` marketplace, so it may not be installed. Never invent the aesthetic here to unblock yourself, and never stall work the aesthetic does not gate. Say plainly that the visual direction is unset, ask for it, and proceed with everything this skill owns that the direction does not affect: the purpose statement, trigger, sequencing, easing, reduced-motion behaviour, lifecycle and cleanup. Hold the motion *character* — restrained or expressive, one bold moment or none. On existing work, read the character from what already ships and match it; do not escalate it.
+
 ## Workflow
 
 Never open an animation library first. Most motion defects are decisions made in the wrong order.

@@ -98,6 +98,8 @@ These are the seams that matter. Each runs in one direction.
 
 `scribeo-motion` carries its own motion-specific performance guidance for authoring-time decisions. **This skill owns page-level measurement, budgets, and profiling** — including of animation.
 
+**If `frontend-design` is unavailable.** It is an Anthropic-provided skill, not part of the `scribeo-skills` marketplace, so it may not be installed. Never invent the aesthetic here to unblock yourself, and never stall work the aesthetic does not gate. Say plainly that the visual direction is unset, ask for it, and proceed with the full loop this skill owns: measurement, diagnosis, budgets and verification. The absence of `frontend-design` never authorises stripping intentional design to win a score — present the measured trade-off and leave the decision open.
+
 ## Workflow
 
 **Phase 1 — Establish ground truth**

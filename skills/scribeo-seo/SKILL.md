@@ -89,6 +89,8 @@ The field is saturated with folklore repeated until it sounds official. These cl
 - **`scribeo-testing` → here.** Owns test architecture, fixtures, CI and regression suites. **It must not invent SEO requirements.**
 - **here → `scribeo-testing`.** Supplies deterministic SEO contracts suitable for automated regression — see the testable-contracts list below.
 
+**If `frontend-design` is unavailable.** It is an Anthropic-provided skill, not part of the `scribeo-skills` marketplace, so it may not be installed. Never invent the aesthetic here to unblock yourself, and never stall work the aesthetic does not gate. Say plainly that the visual direction is unset, ask for it, and proceed with the full audit and implementation. Nothing this skill owns depends on the visual direction; route only the rendering-visible consequences of a change once the direction is known.
+
 ## Workflow
 
 **UNDERSTAND**

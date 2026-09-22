@@ -47,6 +47,8 @@ Three rules follow:
 
 **On testing:** Playwright MCP is used here for interactive inspection. Writing durable test suites, choosing a runner, or designing test architecture is `scribeo-testing`. See the distinction in `references/playwright.md`.
 
+**If `frontend-design` is unavailable.** It is an Anthropic-provided skill, not part of the `scribeo-skills` marketplace, so it may not be installed. Never invent the aesthetic here to unblock yourself, and never stall work the aesthetic does not gate. Say plainly that the visual direction is unset, ask for it, and proceed with every defect measurable against a stated system: spacing against the scale, rendering at each breakpoint, asset and console errors, regression against a baseline. Without a stated intent an aesthetic observation stays a question, not a defect — log it as a question and do not upgrade it to a finding.
+
 ## Workflow
 
 **Phase 1 — Establish the target (before opening a browser)**
